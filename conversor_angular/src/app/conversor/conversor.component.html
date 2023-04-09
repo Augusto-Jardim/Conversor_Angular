@@ -1,0 +1,36 @@
+
+<h1>Conversor de medida</h1>
+
+<!-- entrada de valor e seleção de medida -->
+<div>
+    <label for="inputValue">Valor de entrada:</label>
+    <input type="number" id="inputValue" [(ngModel)]="inputValue" />
+  </div>
+  
+  <div>
+    <label for="inputUnit">Unidade de entrada:</label>
+    <select class="form-select" aria-label="Default select example" id="inputUnit" [(ngModel)]="inputUnit">
+      <option value="metro">Metro</option>
+      <option value="quilometro">Quilômetro</option>
+      <option value="milha">Milha</option>
+    </select>
+  </div>
+
+
+<!-- saída de valor e seleção de medida -->
+<div>
+    <label for="outputValue">Valor de saída:</label>
+    <input type="number" id="outputValue" [(ngModel)]="outputValue" disabled />
+  </div>
+  
+  <div>
+    <label for="outputUnit">Unidade de saída:</label>
+    <select id="outputUnit" [(ngModel)]="outputUnit">
+      <option value="metro">Metro</option>
+      <option value="quilometro">Quilômetro</option>
+      <option value="milha">Milha</option>
+    </select>
+  </div>
+  
+  <!-- botão de conversão -->
+  <button class="btn btn-light" (click)="convertValue()">Converter</button>
